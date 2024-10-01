@@ -1,0 +1,19 @@
+.example-container {
+    width: auto;
+    min-height: 100vh;
+    background: #eee;
+    /* overflow:auto; */
+}
+
+.side-bar {
+    background: green;
+
+}
+
+.active {
+    background-color: red;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}

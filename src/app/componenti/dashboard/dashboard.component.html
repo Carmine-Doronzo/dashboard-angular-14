@@ -1,0 +1,19 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer class="side-bar" mode="side" opened>
+        <mat-list role="list">
+            <mat-list-item role="listitem" routerLink="pagina1" [routerLinkActive]="'active'">Pagina 1</mat-list-item>
+            <mat-list-item role="listitem" routerLink="pagina2" [routerLinkActive]="'active'">Pagina 2</mat-list-item>
+        </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-toolbar>
+            <span>My App</span>
+            <span class="example-spacer"></span>
+            
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="onLogout()">
+              <mat-icon>logout</mat-icon>
+            </button>
+          </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,32 @@
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+nav {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+}
+
+nav>h2 {
+    padding-left: 10px;
+}
+
+.links {
+    display: flex;
+    list-style: none;
+    justify-content: end;
+}
+
+.link {
+    padding-right: 10px;
+
+    color: black;
+}
+
+.active {
+    background-color: red;
+}

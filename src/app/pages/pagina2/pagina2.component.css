@@ -1,0 +1,13 @@
+ .container-person-list{
+    height: calc(100vh - 64px);
+    overflow-y: scroll;
+} 
+.my-modal{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1500;
+}

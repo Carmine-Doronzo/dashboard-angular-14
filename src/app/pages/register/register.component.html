@@ -1,0 +1,22 @@
+<div class="container">
+   
+    <form class="container-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <h1>Register</h1>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Inserisci Email" type="email" formControlName="email">
+
+        </mat-form-field>
+        <p class="error" *ngIf="!registerForm.get('email')?.valid && registerForm.get('email')?.touched "> *Inserisci email </p>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Inserisci password" type="password" formControlName="password">
+
+        </mat-form-field>
+        <p class="error" *ngIf="!registerForm.get('password')?.valid && registerForm.get('password')?.touched "> *Inserisci password </p>
+
+        <button mat-flat-button color="primary" type="submit" [disabled]="!registerForm.valid">Register</button>
+    </form>
+
+</div>
