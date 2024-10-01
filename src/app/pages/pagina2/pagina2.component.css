@@ -2,6 +2,15 @@
     height: calc(100vh - 64px);
     overflow-y: scroll;
 } 
+
+.container-form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .my-modal{
     display: block;
     position: absolute;
@@ -10,4 +19,8 @@
     left: 0;
     bottom: 0;
     z-index: 1500;
+}
+
+.margin-left{
+    margin-left: 70px;
 }

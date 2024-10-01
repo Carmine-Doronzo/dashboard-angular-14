@@ -2,7 +2,7 @@
 
     <h1>Lista di persone</h1>
     <div class="row gap-2 mx-0 justify-content-center">
-        <div class="col-2 card" *ngFor="let person of people">
+        <div class="col-sm-4 col-md-2 card" *ngFor="let person of people">
             <p>{{person.name}} {{person.surname}}</p>
             <button class="btn btn-danger" (click)="onDelete(person.id)">Elimina</button>
             <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" (click)="key = person.id">Modifica Persona</button>
@@ -10,12 +10,12 @@
         </div>
 
     </div>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas h-50  offcanvas-bottom" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
+        <div class="offcanvas-body margin-left">
             <form class="container-form" [formGroup]="patchForm" (ngSubmit)="onPatch()">
                 <h1>Modifica persona</h1>
                 <mat-form-field appearance="fill">
