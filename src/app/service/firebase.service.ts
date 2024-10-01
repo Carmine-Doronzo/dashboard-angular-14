@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseService {
   peopleToMod : any
-  url: string = 'https://angular-course-4b8ea-default-rtdb.europe-west1.firebasedatabase.app/people'
+  url: string = environment.DBurl
   constructor(private http:HttpClient, private authService: AuthService) { }
 
   insertPersona(url:string,body:object){

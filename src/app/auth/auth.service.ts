@@ -2,13 +2,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../models/user.model';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  urlRegister: string = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBAILaKh_XJPRJZbp2uvwsPgbYGJnNJPvI'
-  urlLogin: string = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBAILaKh_XJPRJZbp2uvwsPgbYGJnNJPvI'
+  APIKey = environment.firebasApi 
+  urlRegister: string = `${environment.urlRegister}${this.APIKey}`
+  urlLogin: string = `${environment.urlLogin}${this.APIKey}`
   isLogged = false
   user: User | null
 
